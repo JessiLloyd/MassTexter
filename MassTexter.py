@@ -28,9 +28,17 @@ for number in numberList:
             newNumber = newNumber[1:]
         #check we have a leading 7
         if newNumber[0] == "7":
-            newNumberList.append("44" + newNumber)
+            newNumberList.append("44" + newNumber) #where "44" is the relevant country code
         else:
             deadNumberList.append(number)
+            
+#reminder to text self first
+decision = 'x'
+while decision != 's' and decision != 'l':
+    print "Text self (s) or list (l)?"
+    decision = raw_input()
+if decision == 's':
+    newNumberList = [] #insert own number AS STRING here
 
 #send the texts!
 for number in newNumberList:
